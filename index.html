@@ -4,9 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-		<link rel="stylesheet" href="style.css" />
 		<script src="script.js"></script>
-		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<title>EPICS</title>
 	</head>
 	<body>
 		<div class="reset-overlay">
@@ -26,30 +26,49 @@
 		</div>
 		<div class="fixed-movetop"><img src="img/left.png" alt="top" /></div>
 
+		<!-- 메인화면 -->
 		<!-- INDEX -- MAIN PAGE -->
 		<div class="container" id="page-home">
+			<div class="initial-overlay">
+				<div class="initials">
+					<span class="overlay-text">E</span><span class="overlay-text">P</span
+					><span class="overlay-text">I</span><span class="overlay-text">C</span
+					><span class="overlay-text">S</span>
+				</div>
+			</div>
 			<div class="title-line main-title" id="title-epics">
-				<div class="text-initial">E</div>
-				<div class="text-outline">EPICS DESIGN</div>
+				<div class="text-box">
+					<span class="text-initial">E</span
+					><span class="text-outline">PICS</span>
+				</div>
 			</div>
 			<div class="title-line main-title" id="title-project">
-				<div class="text-initial">P</div>
-				<div class="text-outline">PROJECT</div>
+				<div class="text-box">
+					<span class="text-initial">P</span
+					><span class="text-outline">ROJECT</span>
+				</div>
 			</div>
 			<div class="title-line main-title" id="title-insight">
-				<div class="text-initial">I</div>
-				<div class="text-outline">INSIGHT</div>
+				<div class="text-box">
+					<span class="text-initial">I</span
+					><span class="text-outline">NSIGHT</span>
+				</div>
 			</div>
 			<div class="title-line main-title" id="title-contact">
-				<div class="text-initial">C</div>
-				<div class="text-outline">CONTACT US</div>
+				<div class="text-box">
+					<span class="text-initial">C</span
+					><span class="text-outline">ONTACT</span>
+				</div>
 			</div>
 			<div class="title-line main-title" id="title-service">
-				<div class="text-initial">S</div>
-				<div class="text-outline">SERVICES</div>
+				<div class="text-box">
+					<span class="text-initial">S</span
+					><span class="text-outline">ERVICE</span>
+				</div>
 			</div>
 		</div>
 
+		<!-- 컨텐츠 -->
 		<div class="content-pages">
 			<!-- INDEX > EPICS DESIGN -->
 			<div class="content-page" id="page-epics" data-upper="home">
@@ -176,11 +195,12 @@
 							<div class="sub-text">DETAIL PAGE</div>
 							<div class="main-text">상세페이지</div>
 						</div>
-						<div class="title-line sub-title" id="title-branding">
-							<div class="sub-text">BRANDING</div>
-							<div class="main-text">브랜딩</div>
+
+						<div class="title-line sub-title" id="title-products">
+							<div class="sub-text">PRODUCTS</div>
+							<div class="main-text">명함/판촉물</div>
 						</div>
-						<div class="title-line sub-title" id="title-marketing">
+						<div class="title-line sub-title prepare" id="title-marketing">
 							<div class="sub-text">MARKETING</div>
 							<div class="main-text">마케팅</div>
 						</div>
@@ -211,10 +231,10 @@
 							<div class="sub-text">COMBINED</div>
 							<div class="main-text">복합형</div>
 						</div>
-						<!-- <div class="title-line sub-title" id="title-brand">
+						<div class="title-line sub-title prepare" id="title-brand">
 							<div class="sub-text">BRAND</div>
 							<div class="main-text">브랜드</div>
-						</div> -->
+						</div>
 					</div>
 				</div>
 			</div>
@@ -235,10 +255,18 @@
 							<!-- 추가시 여기부터 복사 -->
 							<div class="img-card" data-url="https://riocnt.co.kr">
 								<div class="card-overlay">
-									<div class="card-title">화장품원료 회사</div>
+									<div class="card-title">화장품원료</div>
 									<div class="link-btn">홈페이지 바로가기</div>
 								</div>
 								<img src="img/리오-풀페이지.jpg" alt="" />
+							</div>
+							<!-- 여기까지 -->
+							<div class="img-card" data-url="https://www.yjworkout.com">
+								<div class="card-overlay">
+									<div class="card-title">법무법인</div>
+									<div class="link-btn">홈페이지 바로가기</div>
+								</div>
+								<img src="img/율재-풀페이지.jpg" alt="" />
 							</div>
 						</div>
 					</div>
@@ -285,7 +313,7 @@
 							<!-- 추가시 여기부터 복사 -->
 							<div class="img-card" data-url="https://www.jangansystem.com">
 								<div class="card-overlay">
-									<div class="card-title">철제가구회사</div>
+									<div class="card-title">철제가구제조</div>
 									<div class="link-btn">홈페이지 바로가기</div>
 								</div>
 								<img src="img/장안-풀페이지.jpg" alt="" />
@@ -296,9 +324,7 @@
 			</div>
 
 			<!-- INDEX > PROJECT > HOMEPAGE > BRAND -->
-
-			<!-- 보류 -->
-			<!-- <div class="content-page" id="page-brand" data-upper="homepage">
+			<div class="content-page" id="page-brand" data-upper="homepage">
 				<div class="page-header">
 					<div class="back-btn"><img src="img/backbtn.png" alt="back" /></div>
 					<div class="page-title">브랜드</div>
@@ -310,7 +336,7 @@
 						<div class="blank-section"></div>
 					</div>
 				</div>
-			</div> -->
+			</div>
 
 			<!-- PROJECT > HOMEPAGE 끝 -->
 
@@ -366,56 +392,140 @@
 								</div>
 								<img
 									class="detail-img"
-									src="img/흑화고천연분말_200px.jpg"
-									data-src="img/흑화고천연분말_상세페이지.jpg"
+									src="img/200유기농-레몬밤-상세페이지.jpg"
+									data-src="img/유기농-레몬밤-상세페이지.jpg"
 									alt="" />
 							</div>
 
 							<div class="img-card" data-url="">
 								<div class="card-overlay">
-									<div class="card-title">버섯선물세트</div>
+									<div class="card-title">더덕선물세트</div>
 									<div class="link-btn">크게 보기</div>
 								</div>
 								<img
 									class="detail-img"
-									src="img/흑화고천연분말_200px.jpg"
-									data-src="img/흑화고천연분말_상세페이지.jpg"
+									src="img/제주흙더덕-메인인트로-200.jpg"
+									data-src="img/제주흙더덕-메인인트로.jpg"
 									alt="" />
 							</div>
 
 							<div class="img-card" data-url="">
 								<div class="card-overlay">
-									<div class="card-title">버섯선물세트</div>
+									<div class="card-title">베리믹스&넛츠</div>
 									<div class="link-btn">크게 보기</div>
 								</div>
 								<img
 									class="detail-img"
-									src="img/흑화고천연분말_200px.jpg"
-									data-src="img/흑화고천연분말_상세페이지.jpg"
+									src="img/베리믹스엔화이트200.jpg"
+									data-src="img/베리믹스엔화이트250414.jpg"
 									alt="" />
 							</div>
 
 							<div class="img-card" data-url="">
 								<div class="card-overlay">
-									<div class="card-title">버섯선물세트</div>
+									<div class="card-title">견과선물세트</div>
 									<div class="link-btn">크게 보기</div>
 								</div>
 								<img
 									class="detail-img"
-									src="img/흑화고천연분말_200px.jpg"
-									data-src="img/흑화고천연분말_상세페이지.jpg"
+									src="img/스폐셜견과10종세트_상세페이지200.jpg"
+									data-src="img/스폐셜견과10종세트_상세페이지.jpg"
 									alt="" />
 							</div>
 
 							<div class="img-card" data-url="">
 								<div class="card-overlay">
-									<div class="card-title">버섯선물세트</div>
+									<div class="card-title">실론시나몬스틱</div>
 									<div class="link-btn">크게 보기</div>
 								</div>
 								<img
 									class="detail-img"
-									src="img/흑화고천연분말_200px.jpg"
-									data-src="img/흑화고천연분말_상세페이지.jpg"
+									src="img/시나몬스틱-상세페이지_200.jpg"
+									data-src="img/시나몬스틱-상세페이지_색상변경.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">아카시아스틱꿀</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/포레스비아카시아스틱꿀_250529200.jpg"
+									data-src="img/포레스비아카시아스틱꿀_250529.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">곶감선물세트</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/241224_상주곶감-상세페이지200.jpg"
+									data-src="img/241224_상주곶감-상세페이지.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">올리브오일스틱</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/올리브오일_상세페이지_합친-상세200.jpg"
+									data-src="img/올리브오일_상세페이지_합친 상세.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">월계수잎</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/월계수잎_상세페이지200.jpg"
+									data-src="img/월계수잎_상세페이지.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">삼계탕재료세트</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/삼계탕재료세트_상세페이지-최종200.jpg"
+									data-src="img/삼계탕재료세트_상세페이지-최종.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">한입밤고구마</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/한입밤고구마_상세페이지200.jpg"
+									data-src="img/한입밤고구마_상세페이지.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">홍삼말랭이</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/홍삼말랭이_최종200.jpg"
+									data-src="img/241113_홍삼말랭이_상세페이지.jpg"
 									alt="" />
 							</div>
 						</div>
@@ -439,12 +549,25 @@
 							<!-- 추가시 여기부터 복사 -->
 							<div class="img-card" data-url="">
 								<div class="card-overlay">
-									<div class="card-title">허브티 티백</div>
+									<div class="card-title">냉장고</div>
 									<div class="link-btn">크게 보기</div>
 								</div>
 								<img
 									class="detail-img"
-									src="img/히말라야_상세페이지.jpg"
+									src="img/에픽스_냉장고-상세페이지200.jpg"
+									data-src="img/에픽스_냉장고-상세페이지.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">헤드셋</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/헤드셋상세페이지(에픽스)200.jpg"
+									data-src="img/헤드셋상세페이지(에픽스).jpg"
 									alt="" />
 							</div>
 						</div>
@@ -463,6 +586,32 @@
 				<div class="page-body">
 					<div class="content-box">
 						<div class="blank-section"></div>
+						<div class="card-wrap">
+							<!-- 추가시 여기부터 복사 -->
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">블루밍토너</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/EPICS블루밍-토너_상세페이지200.jpg"
+									data-src="img/EPICS블루밍-토너_상세페이지.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">헤드셋</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/스킨로션상세페이지200.jpg"
+									data-src="img/스킨로션상세페이지.jpg"
+									alt="" />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -478,23 +627,211 @@
 				<div class="page-body">
 					<div class="content-box">
 						<div class="blank-section"></div>
+						<div class="card-wrap">
+							<!-- 추가시 여기부터 복사 -->
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">매트리스</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/EPICS매트리스상세페이지200.jpg"
+									data-src="img/EPICS매트리스상세페이지.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">샴푸바</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/EPICS샴푸바200.jpg"
+									data-src="img/EPICS샴푸바200.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">칫솔</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/EPICS칫솔_상세페이지200.jpg"
+									data-src="img/EPICS칫솔_상세페이지200.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">신발</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/에픽스-신발-상세페이지200.jpg"
+									data-src="img/에픽스-신발-상세페이지.jpg"
+									alt="" />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<!-- PROJECT > DETAIL 끝 -->
 
-			<!-- PROJECT > BRANDING 시작 -->
-			<!-- INDEX > PROJECT > BRANDING -->
-			<div class="content-page" id="page-branding" data-upper="project">
+			<!-- PROJECT > PRODUCTS 시작 -->
+			<!-- INDEX > PROJECT > PRODUCTS -->
+			<div class="content-page" id="page-products" data-upper="project">
 				<div class="page-header">
 					<div class="back-btn"><img src="img/backbtn.png" alt="back" /></div>
-					<div class="page-title">브랜딩</div>
-					<div class="page-engtitle">BRANDING</div>
+					<div class="page-title">명함/판촉물</div>
+					<div class="page-engtitle">PRODUCTS</div>
+				</div>
+
+				<div class="page-body">
+					<div class="sub-menu">
+						<div class="title-line sub-title" id="title-business">
+							<div class="sub-text">BUSINESS CARD</div>
+							<div class="main-text">명함</div>
+						</div>
+						<div class="title-line sub-title" id="title-promotions">
+							<div class="sub-text">PROMOTIONS</div>
+							<div class="main-text">판촉물</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- INDEX > PROJECT > PRODUCTS > BUSINESS CARD -->
+			<div class="content-page" id="page-business" data-upper="products">
+				<div class="page-header">
+					<div class="back-btn"><img src="img/backbtn.png" alt="back" /></div>
+					<div class="page-title">명함</div>
+					<div class="page-engtitle">BUSINESS CARD</div>
 				</div>
 
 				<div class="page-body">
 					<div class="content-box">
 						<div class="blank-section"></div>
+
+						<div class="card-wrap">
+							<!-- 추가시 여기부터 복사 -->
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">EPICS</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/에픽스명함.jpg"
+									data-src="img/에픽스명함.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">교동이수농산</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/명함 (3).jpg"
+									data-src="img/명함 (3).jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">Global Trade</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/GlobalTrade명함목업.jpg"
+									data-src="img/GlobalTrade명함목업.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">태양공인중개사</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/명함 (1).jpg"
+									data-src="img/명함 (1).jpg"
+									alt="" />
+							</div>
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">담다헌</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/명함 (2).jpg"
+									data-src="img/명함 (2).jpg"
+									alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- INDEX > PROJECT > PRODUCTS > PROMOTIONS -->
+			<div class="content-page" id="page-promotions" data-upper="products">
+				<div class="page-header">
+					<div class="back-btn"><img src="img/backbtn.png" alt="back" /></div>
+					<div class="page-title">판촉물</div>
+					<div class="page-engtitle">PROMOTIONS</div>
+				</div>
+
+				<div class="page-body">
+					<div class="content-box">
+						<div class="blank-section"></div>
+
+						<div class="card-wrap">
+							<!-- 추가시 여기부터 복사 -->
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">정월사진관</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/정월th.jpg"
+									data-src="img/정월.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">랑랑분식</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/랑랑.jpg"
+									data-src="img/랑랑.jpg"
+									alt="" />
+							</div>
+
+							<div class="img-card" data-url="">
+								<div class="card-overlay">
+									<div class="card-title">영양제</div>
+									<div class="link-btn">크게 보기</div>
+								</div>
+								<img
+									class="detail-img"
+									src="img/영양제-상세레이아웃800.jpg"
+									data-src="img/영양제-상세레이아웃.jpg"
+									alt="" />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -524,14 +861,16 @@
 				</div>
 				<div class="page-body">
 					<div class="sub-menu">
-						<div class="title-line sub-title" data-url="">
+						<div
+							class="title-line sub-title"
+							data-url="https://www.instagram.com/epics_2025?igsh=MW5sdmtmazZjbHJkYw==">
 							<div class="sub-text">INSTAGRAM</div>
 							<div class="main-text">인스타그램</div>
 						</div>
-						<div class="title-line sub-title" data-url="">
+						<!-- <div class="title-line sub-title" data-url="">
 							<div class="sub-text">REVIEWS</div>
 							<div class="main-text">고객후기</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -576,11 +915,15 @@
 				</div>
 				<div class="page-body">
 					<div class="sub-menu">
-						<div class="title-line sub-title" data-url="">
+						<div
+							class="title-line sub-title"
+							data-url="https://www.epics1.co.kr/%EB%94%94%EC%9E%90%EC%9D%B8%EC%83%81%EB%8B%B4">
 							<div class="sub-text">SUPPORT REQUEST</div>
 							<div class="main-text">유지보수 신청</div>
 						</div>
-						<div class="title-line sub-title" data-url="">
+						<div
+							class="title-line sub-title"
+							data-url="https://www.epics1.co.kr/%EB%94%94%EC%9E%90%EC%9D%B8%EC%83%81%EB%8B%B4">
 							<div class="sub-text">CONSULTATION</div>
 							<div class="main-text">디자인 상담</div>
 						</div>

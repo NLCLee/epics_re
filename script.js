@@ -1,4 +1,10 @@
 $(document).ready(function () {
+	//삭제할거
+	$(".reset-overlay").css("display", "none");
+	// $(".container").css("display", "none");
+	// $(".content-page").removeClass("page-show");
+	// $("#page-food").addClass("page-show");
+
 	//타이틀 클릭
 	$(".title-line").on("click", function () {
 		const $clicked = $(this);
@@ -8,17 +14,21 @@ $(document).ready(function () {
 		if ($(this).is(".main-title")) {
 			$(".main-title").css("pointer-events", "none");
 			$(".main-title .text-outline").addClass("text-collapse");
-			$(".main-title .text-initial").addClass("initial-move");
+			setTimeout(() => {
+				$(".text-initial").addClass("initial-collapse");
+				$(".overlay-text").addClass("initial-move");
+			}, 300);
+
 			setTimeout(() => {
 				$(".container").addClass("fade-out");
-			}, 1500);
+				$(".initial-overlay").addClass("fade-out");
+			}, 2100);
+
 			setTimeout(() => {
 				$(".container").css("display", "none");
-				// id에서 'title-' 뒤의 문자열 추출
-
 				$(".content-page").removeClass("page-show");
 				$("#page-" + key).addClass("page-show");
-			}, 2100);
+			}, 2700);
 
 			setTimeout(() => {
 				$(".content-page").removeClass("page-show");
@@ -27,6 +37,30 @@ $(document).ready(function () {
 		} else {
 			$(".content-page").removeClass("page-show");
 			$("#page-" + key).addClass("page-show");
+		}
+	});
+
+	//뒤로가기
+	$(".back-btn").on("click", function () {
+		const $currentPage = $(this).closest(".content-page");
+		const upperPageKey = $currentPage.data("upper"); // data-upper 값 읽기
+
+		// 현재 페이지 숨기기
+		$currentPage.removeClass("page-show");
+
+		// 상위 페이지 보여주기
+		if (upperPageKey == "home") {
+			$(".container").removeClass("fade-out");
+			$(".container").css("display", "grid");
+			$(".main-title .text-outline").removeClass("text-collapse");
+			$(".text-outline").css("display", "inline-block");
+			$(".main-title .text-initial").removeClass("initial-collapse");
+			$(".main-title").css("pointer-events", "all");
+			$(".container").addClass("reset-in");
+			$(".initial-overlay").removeClass("fade-out");
+			$(".overlay-text").removeClass("initial-move");
+		} else {
+			$("#page-" + upperPageKey).addClass("page-show");
 		}
 	});
 
@@ -71,27 +105,6 @@ $(document).ready(function () {
 		});
 	});
 
-	//뒤로가기
-	$(".back-btn").on("click", function () {
-		const $currentPage = $(this).closest(".content-page");
-		const upperPageKey = $currentPage.data("upper"); // data-upper 값 읽기
-
-		// 현재 페이지 숨기기
-		$currentPage.removeClass("page-show");
-
-		// 상위 페이지 보여주기
-		if (upperPageKey == "home") {
-			$(".container").removeClass("fade-out");
-			$(".container").css("display", "flex");
-			$(".main-title .text-outline").removeClass("text-collapse");
-			$(".main-title .text-initial").removeClass("initial-move");
-			$(".main-title").css("pointer-events", "all");
-			$(".container").addClass("reset-in");
-		} else {
-			$("#page-" + upperPageKey).addClass("page-show");
-		}
-	});
-
 	$(".fixed-movetop").on("click", function () {
 		$("html, body").animate({ scrollTop: 0 }, 500);
 	});
@@ -123,28 +136,5 @@ $(document).ready(function () {
 		document.querySelectorAll(".contents").forEach((el) => {
 			observer.observe(el);
 		});
-	});
-
-	const swiper = new Swiper(".mySwiper", {
-		effect: "fade", // 페이드 효과
-		loop: true, // 무한 반복
-		speed: 1000, // 전환 속도
-		autoplay: {
-			// 자동 재생
-			delay: 5000,
-			disableOnInteraction: false,
-		},
-		fadeEffect: {
-			// 페이드 전환 옵션
-			crossFade: true, // 슬라이드 겹치면서 전환
-		},
-		slidesPerView: 1, // 한 번에 1장
-		spaceBetween: 0,
-		breakpoints: {
-			// 반응형
-			480: { slidesPerView: 1 },
-			768: { slidesPerView: 1 },
-			1024: { slidesPerView: 1 },
-		},
 	});
 });
