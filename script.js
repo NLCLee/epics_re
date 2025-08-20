@@ -1,9 +1,5 @@
 $(document).ready(function () {
-	//삭제할거
-	$(".reset-overlay").css("display", "none");
-	// $(".container").css("display", "none");
-	// $(".content-page").removeClass("page-show");
-	// $("#page-food").addClass("page-show");
+	let isMobile = window.innerWidth < 768;
 
 	//타이틀 클릭
 	$(".title-line").on("click", function () {
@@ -11,13 +7,17 @@ $(document).ready(function () {
 		const id = $clicked.attr("id"); // 예: "title-epics"
 		const key = id.split("title-")[1]; // "epics"
 
+		if (key === "marketing") return;
+		if (key === "brand") return;
+
 		if ($(this).is(".main-title")) {
 			$(".main-title").css("pointer-events", "none");
 			$(".main-title .text-outline").addClass("text-collapse");
 			setTimeout(() => {
-				$(".text-initial").addClass("initial-collapse");
 				$(".overlay-text").addClass("initial-move");
+				$(".text-initial").addClass("initial-collapse");
 			}, 300);
+			setTimeout(() => {}, 600);
 
 			setTimeout(() => {
 				$(".container").addClass("fade-out");
@@ -86,12 +86,40 @@ $(document).ready(function () {
 			return;
 		}
 		let imgSrc = $(this).find(".detail-img").data("src");
+		let isBizcard = $(this).closest("#page-business").length > 0;
+
 		$(".card-viewer").html('<img src="' + imgSrc + '" alt="">');
 		$(".card-viewer").animate({ scrollTop: 0 });
-		$(".content-page").css({
-			overflow: "hidden",
-			"padding-right": "15px",
-		});
+		$(".content-page").css("overflow", "hidden");
+		$(".alert-box").fadeOut(1500);
+
+		if (!isMobile) {
+			$(".content-page").css("padding-right", "15px");
+
+			if (isBizcard) {
+				console.log("PC-CARD");
+				$(".card-viewer").css("align-items", "center");
+				$(".card-viewer").find("img").css({
+					width: "45%",
+				});
+			} else {
+				console.log("PC-NO CARD");
+				$(".card-viewer").css("align-items", "flex-start");
+				$(".card-viewer").find("img").css({
+					width: "40%",
+				});
+			}
+		} else {
+			$(".card-viewer").find("img").css("width", "90%");
+
+			if (isBizcard) {
+				console.log("MO-CARD");
+				$(".card-viewer").css("align-items", "center");
+			} else {
+				console.log("MO-NO CARD");
+				$(".card-viewer").css("align-items", "flex-start");
+			}
+		}
 		$(".viewer-bg").fadeIn(300);
 	});
 
@@ -99,6 +127,7 @@ $(document).ready(function () {
 	$(".viewer-bg").on("click", function () {
 		// 이미지 클릭이 아니라 바탕 클릭일 때만 닫기
 		$(".viewer-bg").fadeOut(300);
+		$(".alert-box").fadeIn(1000);
 		$(".content-page").css({
 			overflow: "auto",
 			"padding-right": "",
